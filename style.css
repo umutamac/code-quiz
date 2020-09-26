@@ -1,0 +1,16 @@
+header{
+    text-align: center;
+    background-color: teal;
+}
+
+.buttons{
+    text-align: center;
+}
+#hi-scores-btn,
+#start-btn{
+font-size: x-large;
+}
+
+.countdown-timer {
+    font-size: x-large;
+}
