@@ -10,33 +10,76 @@
 <div class="container">
     <header>
        <h1>Welcome to the 2020 JS Quiz</h1>
-        <h2>Presented by no one :(</h2>
+        <h2>Created by Umut A. - Sep 2020</h2>
     </header>
 
-    <div class="buttons">
+    <div class="main-buttons">
         <button id="hi-scores-btn">View Highscores</button>
         <button id="start-btn">Start the Quiz!</button>
     </div>
 
     <div class="countdown-timer">
-        <p>Time Left: </p>
-        <p id="time"></p>
-        <!-- Timer appears here-->
+        <p>Time Left: <span id="time"><!-- Timer appears here--></span></p>
     </div>
 
-    <div id="q&a-window">
-        <p id="question">question?</p>
-        <ul class="answers">
-            <li id="first answer">a</li>
-            <li id="second answer">b</li>
-            <li id="third answer">c</li>
-            <li id="fourth answer">d</li>
-        </ul>
+    <div class="QA1">
+        <p id="q1">What keyword is used to call a function when an element is clicked on?</p>
+        <br>
+        <div class="buttons">
+            <button class="q1answer" id="correctAnswer">addEventListener</button>
+            <button class="q1answer">setInterval</button>
+            <button class="q1answer">getElementById</button>
+            <button class="q1answer">querySelector</button>
+        </div>
+    </div>
+    
+    <div class="QA2">
+        <p id="q2">Which one is used to link a JS file to the HTML file?</p>
+        <br>
+        <div class="buttons">
+            <button class="q2answer" id="correctAnswer">&lt;script src=\"\"&gt;&lt;/script&gt;</button>
+            <button class="q2answer">&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;</button>
+            <button class="q2answer">getElementById</button>
+            <button class="q2answer">querySelector</button>
+        </div>
+    </div>
+    
+    <div class="QA3">
+        <p id="q3">What syntax is used to create comments in JS?</p>
+        <br>
+        <div class="buttons">
+            <button class="q3answer">[]</button>
+            <button class="q3answer">{}</button>
+            <button class="q3answer" id="correctAnswer">/**/</button>
+            <button class="q3answer">~</button>
+        </div>
+    </div>
+    
+    <div class="QA4">
+        <p id="q4">Which keyword is used for manipulating an array?</p>
+        <br>
+        <div class="buttons">
+            <button class="q4answer">Math</button>
+            <button class="q4answer">splice</button>
+            <button class="q4answer" id="correctAnswer">setAttribute</button>
+            <button class="q4answer">preventDefault</button>
+        </div>
     </div>
 
-    <div id="results">
-        Your score: 1234<!-- Result appears here-->
+    <div class="CW-banner">
+        <br>
+        <hr>
+        <span id="correct">Correct!</span><span id="wrong">Wrong!</span>
     </div>
+
+    <div class="resultSave">
+        <p>Your score is: <span id="currentScore"><!--Score goes here--></span></p>
+        <label for="fname">Your name: </label> <input type="text" id="fname" name="fname">
+        <button id="saveScore">Save</button>
+        <br>
+        <br>
+    </div>
+
 </div>
 
     <script src="logic.js"></script>

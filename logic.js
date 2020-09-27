@@ -1,57 +1,65 @@
 var hiScoreBtn = document.querySelector("#hi-scores")
 var startBtn = document.querySelector("#start-btn")
-var answerBtn = document.querySelector("#start-btn")
-var qa = document.getElementById("q&a-window")
 var time = document.getElementById("time");
 
-// var hiScoreBtn = document.querySelector("#hi-scores")
-// var hiScoreBtn = document.querySelector("#hi-scores")
-// var hiScoreBtn = document.querySelector("#hi-scores")
-// var hiScoreBtn = document.querySelector("#hi-scores")
+var set1 = document.querySelector("QA1");
+var set2 = document.querySelector("QA2");
+var set3 = document.querySelector("QA3");
+var set4 = document.querySelector("QA4");
+var q1answer = document.querySelector("q1answer");
+var q2answer = document.querySelector("q2answer");
+var q3answer = document.querySelector("q3answer");
+var q4answer = document.querySelector("q4answer");
+var correctAnswer = document.getElementById("correctAnswer");
 
-// Questions
-qa.style.display="none";
+var currentScore = document.getElementById("resultSave");
 
-var questions = 
-["What keyword is used to call a function when an element is clicked on?",
-"Which one is used to link a JS file to the HTML file?",
-"What syntax is used to create comments in JS?",
-"Which keyword is used for manipulating an array?",]
-
-var answers = 
-[""
-];
-
+// Showing/Hiding questions
+function showQuestion1(){
+    set1.style.display = "block"
+}
+function showQuestion2(){
+    set1.style.display = "none"
+    set2.style.display = "block"
+}
+function showQuestion3(){
+    set2.style.display = "none"
+    set3.style.display = "block"
+}
+function showQuestion4(){
+    set3.style.display = "none"
+    set4.style.display = "block"
+}
+function resultEntry(){
+    set4.style.display = "none"
+    currentScore.style.display="block"
+}
 
 // Countdown Timer
-
 var secondsLeft = 10;
 function countdown(){
-    
     time.textContent = "";
     time.textContent += secondsLeft;
     secondsLeft--;
     
 }
-if (secondsLeft<0){
-    var y = clearInterval(countdown);
-    time.textContent = "Done";
-}
+
+startBtn.addEventListener("click", function() {
+    set1.style.display = "block"
 
 
-
-
-
-startBtn.addEventListener("click", function(event) {
-    var x = setInterval(countdown,1000)
-    qa.style.display="block"
-    if (secondsLeft==0){
-        qa.style.display="none"
+    secondsLeft = 10;
+    var x = setInterval(countdown,1000);
+    if (secondsLeft<0){
+        clearInterval(x);
+        time.textContent = "Time is up!";
     }
+
 });
 
-hiScoreBtn.addEventListener("click", function(event) {
-    
-});
+q1answer.addEventListener("click",showQuestion2);
+q2answer.addEventListener("click",showQuestion3);
+q3answer.addEventListener("click",showQuestion4);
+q2answer.addEventListener("click",resultEntry);
 
-
+correctAnswer.addEventListener()

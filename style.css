@@ -1,16 +1,57 @@
+body{
+    background-image: url(https://images.hdqwalls.com/download/windows-xp-bliss-4k-lu-1920x1080.jpg);
+}
 header{
     text-align: center;
     background-color: teal;
 }
 
-.buttons{
+.main-buttons{
     text-align: center;
 }
 #hi-scores-btn,
 #start-btn{
-font-size: x-large;
+    font-size: x-large;
+}
+.countdown-timer {
+    margin: auto;
+    width: fit-content;
+    background-color: wheat;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
 }
 
-.countdown-timer {
+
+.QA1, .QA2, .QA3, .QA4 {
+    /* display: none; */
+    margin: auto;
+    background-color: thistle;
+    padding: 30px;
+    width: fit-content;
+    text-align: center;
+    font-size: larger;
+}
+.buttons{
+    margin: auto;
+    width: fit-content;
+}
+.resultSave{
+    /* display: none; */
+    background-color: rgb(174, 235, 204);
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
+.CW-banner{
+    background-color: yellowgreen;
+    /* display: none; */
+}
+.score-list{
+    background-color: rgb(238, 132, 181);
+    text-align: center;
+    margin: auto;
     font-size: x-large;
+    padding: 20px;
+
 }
