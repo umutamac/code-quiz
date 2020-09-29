@@ -4,12 +4,13 @@ body{
 header{
     text-align: center;
     background-color: teal;
+    padding: 20px;
 }
 
 .main-buttons{
     text-align: center;
 }
-#hi-scores-btn,
+#scores-btn,
 #start-btn{
     font-size: x-large;
 }
@@ -23,8 +24,8 @@ header{
 }
 
 
-.QA1, .QA2, .QA3, .QA4 {
-    /* display: none; */
+.QA-window {
+    display: none;
     margin: auto;
     background-color: thistle;
     padding: 30px;
@@ -32,12 +33,17 @@ header{
     text-align: center;
     font-size: larger;
 }
-.buttons{
+.answer-buttons button{
     margin: auto;
     width: fit-content;
 }
-.resultSave{
-    /* display: none; */
+.feedback{
+    background-color: violet;
+    text-align: center;
+    font-weight: 800;
+}
+.result-save-page{
+    display: none;
     background-color: rgb(174, 235, 204);
     margin: auto;
     text-align: center;
@@ -45,13 +51,13 @@ header{
 }
 .CW-banner{
     background-color: yellowgreen;
-    /* display: none; */
+    display: none;
 }
-.score-list{
+.scores-page{
+    display: none;
     background-color: rgb(238, 132, 181);
-    text-align: center;
     margin: auto;
+    text-align: center;
     font-size: x-large;
     padding: 20px;
-
 }
