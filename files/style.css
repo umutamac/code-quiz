@@ -11,7 +11,8 @@ header{
     text-align: center;
 }
 #scores-btn,
-#start-btn{
+#start-btn,
+#back-btn{
     font-size: x-large;
 }
 .countdown-timer {
