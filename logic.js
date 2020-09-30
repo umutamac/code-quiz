@@ -71,7 +71,19 @@ function countdown(){ // countdown starts at one second less than secondsLeft va
 
 
 
-
+function renderScores() {
+    scoresList.innerHTML = "";
+  
+    // Render a new li for each score 
+    for (var i=0; i < scoreinput.length; i++) {
+      var score = scoreinput[i];
+      var name = nameinput[i];
+      var li = document.createElement("li");
+      li.textContent = "Name: " + name + " \- Score: " + score;
+      li.setAttribute("data-index", i);
+      scoresList.appendChild(li);
+    }
+};
 function scoresPageInitialize() {
     // Get stored todos from localStorage
     // Parsing the JSON string to an object
@@ -88,19 +100,7 @@ function scoresPageInitialize() {
     renderScores();
 }
 
-function renderScores() {
-    scoresList.innerHTML = "";
-  
-    // Render a new li for each score 
-    for (var i=0; i < scoreinput.length; i++) {
-      var score = scoreinput[i];
-      var name = nameinput[i];
-      var li = document.createElement("li");
-      li.textContent = "Name: " + name + " \- Score: " + score;
-      li.setAttribute("data-index", i);
-      scoresList.appendChild(li);
-    }
-};
+
 
 
 
@@ -142,6 +142,7 @@ document.body.addEventListener("click", function(event){
         resultSavePage.style.display="block"; // show result saving form
         resultEntry();
         }
+        currentScore.textContent = secondsLeft;
         showQuestionAndAnswers(index) // show next question and asnwers
     }
 });
