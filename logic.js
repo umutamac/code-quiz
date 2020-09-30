@@ -16,7 +16,7 @@ var secondsLeft = 0; // introduce remaining time variable
 
 // scores page variables
 var scoresPage = document.querySelector(".scores-page");
-var scoresList = document.querySelector("#scores-list");
+var scoreList = document.querySelector("#score-list");
 
 var nameinput = [];
 var scoreinput = [];
@@ -72,7 +72,7 @@ function countdown(){ // countdown starts at one second less than secondsLeft va
 
 
 function renderScores() {
-    scoresList.innerHTML = "";
+    scoreList.innerHTML = "";
   
     // Render a new li for each score 
     for (var i=0; i < scoreinput.length; i++) {
@@ -81,7 +81,7 @@ function renderScores() {
       var li = document.createElement("li");
       li.textContent = "Name: " + name + " \- Score: " + score;
       li.setAttribute("data-index", i);
-      scoresList.appendChild(li);
+      scoreList.appendChild(li);
     }
 };
 function scoresPageInitialize() {
@@ -140,7 +140,6 @@ document.body.addEventListener("click", function(event){
         clearInterval(interval); // stop timer
         QAwindow.style.display = "none"; // hide question answer window
         resultSavePage.style.display="block"; // show result saving form
-        resultEntry();
         }
         currentScore.textContent = secondsLeft;
         showQuestionAndAnswers(index) // show next question and asnwers
