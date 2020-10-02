@@ -76,7 +76,9 @@ function renderScores() {
   
     // Render a new li for each score 
     for (var i=0; i < scoreinput.length; i++) {
+        
       var score = scoreinput[i];
+      console.log(score);
       var name = nameinput[i];
       var li = document.createElement("li");
       li.textContent = "Name: " + name + " \- Score: " + score;
@@ -93,9 +95,12 @@ function scoresPageInitialize() {
     // If todos were retrieved from localStorage, update the todos array to it
     if (storednames !== null) {
       nameinput = storednames;
+      console.log("yes names")
+      console.log(storednames)
     }
     if (storedscores !== null) {
         scoreinput = storedscores;
+        console.log(storedscores)
     }
     renderScores();
 }
